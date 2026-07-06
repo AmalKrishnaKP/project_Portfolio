@@ -1,20 +1,30 @@
- import type { EmployeeProps } from "../../types/props";
+import type { EmployeeProps } from "../../types/props";
 import { FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import { FiUserPlus } from "react-icons/fi";
+import { FiUserPlus, FiLogOut } from "react-icons/fi";
 import { downloadContact } from "../../utils/downloadContact";
+import { useAuthStore } from "../../store/useAuthStore";
 
 function MainContent({ employee }: EmployeeProps) {
+  const { logout } = useAuthStore()
+
   return (
     <section className="relative mx-auto max-w-7xl px-6 py-16">
-      <div className="absolute right-6 top-6">
-      <button
-  onClick={() => downloadContact(employee)}
-  className="inline-flex items-center gap-2 rounded-lg bg-[#0052CC] px-5 py-1 text-white font-semibold"
->
-  <FiUserPlus size={18} />
-  Save Contact
-</button>
-</div>
+      <div className="absolute right-6 top-6 flex items-center gap-3">
+        <button
+          onClick={() => downloadContact(employee)}
+          className="cursor-pointer inline-flex items-center gap-2 rounded-lg bg-[#0052CC] px-5 py-1.5 text-white font-semibold text-sm transition hover:bg-[#003d9b]"
+        >
+          <FiUserPlus size={16} />
+          Save Contact
+        </button>
+        <button
+          onClick={logout}
+          className="cursor-pointer inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-1.5 text-[#434654] font-semibold text-sm transition hover:bg-gray-50"
+        >
+          <FiLogOut size={16} />
+          Log Out
+        </button>
+      </div>
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
 
         {/* LEFT COLUMN */}
@@ -97,13 +107,13 @@ function MainContent({ employee }: EmployeeProps) {
                   <p className="text-xs text-gray-500">
                     Email Address
                   </p>
-                    <a
+                  <a
                     href={`mailto:${employee.email}`}
                     className="text-sm font-medium text-[#0052CC] hover:underline"
-                    >
+                  >
                     {employee.email}
-                    </a>
-                  
+                  </a>
+
 
                 </div>
 
@@ -126,9 +136,9 @@ function MainContent({ employee }: EmployeeProps) {
                   <a
                     href={`tel:${employee.phone}`}
                     className="text-sm font-medium text-[#0052CC] hover:underline"
-                    >
+                  >
                     {employee.phone}
-                    </a>
+                  </a>
 
                 </div>
 
@@ -153,9 +163,9 @@ function MainContent({ employee }: EmployeeProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm font-medium text-[#0052CC] hover:underline break-all"
-                    >
+                  >
                     {employee.linkedin}
-                </a>
+                  </a>
                 </div>
 
               </div>

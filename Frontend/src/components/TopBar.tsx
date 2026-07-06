@@ -1,10 +1,13 @@
 import { LogOut } from "lucide-react"
+import { useAuthStore } from "../store/useAuthStore"
 
 type TopBarProps = {
   onMenuClick: () => void
 }
 
 function TopBar({ onMenuClick }: TopBarProps) {
+  const { logout } = useAuthStore()
+
   return (
     <header className="sticky top-0 z-40 flex h-16 items-center justify-between border-b border-[#dfe1e6] bg-white px-6 shadow-sm lg:px-8">
       <div className="flex flex-1 items-center gap-4">
@@ -32,8 +35,13 @@ function TopBar({ onMenuClick }: TopBarProps) {
       </div>
 
       <div className="flex items-center gap-4">
-        <button type="button" className="rounded-full p-2 text-[#434654] transition-colors hover:bg-[#f3f4f6]">
-          <span className="material-symbols-outlined"><span><LogOut /></span></span>
+        <button
+          type="button"
+          onClick={logout}
+          className="rounded-full p-2 text-[#434654] transition-colors hover:bg-[#f3f4f6]"
+          aria-label="Log out"
+        >
+          <span className="material-symbols-outlined flex items-center justify-center"><LogOut size={20} /></span>
         </button>
         {/* <button type="button" className="rounded-full p-2 text-[#434654] transition-colors hover:bg-[#f3f4f6]">
           <span className="material-symbols-outlined">help</span>
