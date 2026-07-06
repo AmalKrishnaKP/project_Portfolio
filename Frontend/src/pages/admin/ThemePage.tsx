@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
-import ThemePreview from '../components/ThemePreview'
-import Toast from '../components/Toast'
+import ThemePreview from '@/components/admin/ThemePreview'
+import Toast from '@/components/common/Toast'
 
 const presets = [
   { name: 'Enterprise', values: ['#003d9b', '#36B37E', '#f8f9fb', '#edeef0', '#172B4D'] },

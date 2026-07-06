@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import EditModal from '../../components/EditModal'
-import EmployeeCard from '../../components/EmployeeCard'
-import { useEmployeeStore } from '../../store/useEmployeeStore'
+import EditModal from '@/components/admin/EditModal'
+import EmployeeCard from '@/components/admin/EmployeeCard'
+import { useEmployeeStore } from '@/store/useEmployeeStore'
 import { Link } from 'react-router-dom'
 
 function DirectoryPage() {

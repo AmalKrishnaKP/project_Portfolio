@@ -1,16 +1,16 @@
 import { useState } from "react";
-import Header from "../../components/employee/Header";
-import HeroSection from "../../components/employee/HeroSection";
-import MainContent from "../../components/employee/MainContent";
-import AboutTarento from "../../components/client/CompanySection";
-import KnowMore from "../../components/client/KnowMoreSection";
-import TrustedBy from "../../components/client/TrustedSection";
-import Footer from "../../components/client/Footer";
-import QRModal from "../../components/employee/QRModal";
-import AnalyticsModal from "../../components/employee/AnalyticsModal";
+import Header from "@/components/employee/Header";
+import HeroSection from "@/components/employee/HeroSection";
+import MainContent from "@/components/employee/MainContent";
+import AboutTarento from "@/components/client/CompanySection";
+import KnowMore from "@/components/client/KnowMoreSection";
+import TrustedBy from "@/components/client/TrustedSection";
+import Footer from "@/components/client/Footer";
+import QRModal from "@/components/employee/QRModal";
+import AnalyticsModal from "@/components/employee/AnalyticsModal";
 
-import { employee as employeeData } from "../../data/employees/employee";
-import { company as companyData } from "../../data/company/company";
+import { employee as employeeData } from "@/data/employee";
+import { company as companyData } from "@/data/company";
 
 function EmployeeProfile() {
   const [employee, setEmployee] = useState(employeeData);

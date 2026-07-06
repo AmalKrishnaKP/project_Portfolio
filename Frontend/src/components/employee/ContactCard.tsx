@@ -1,5 +1,5 @@
 import { FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import type { Employee } from "../../types/employee";
+import type { Employee } from "@/types/employee";
 
 type Props = {
   employee: Employee;

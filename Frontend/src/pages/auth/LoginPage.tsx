@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
-import { useAuthStore } from '../store/useAuthStore'
-import tarentoLogo from '../assets/tarento.svg'
+import { useAuthStore } from '@/store/useAuthStore'
+import tarentoLogo from '@/assets/tarento.svg'
 
 function LoginPage() {
   const { currentUser, login } = useAuthStore()
@@ -36,7 +36,7 @@ function LoginPage() {
     } else if (updatedUser.role === 'admin') {
       navigate('/')
     } else if (updatedUser.role === 'employee') {
-      navigate('/client')
+      navigate('/employee')
     }
   }
 

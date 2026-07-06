@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import tarentoLogo from '../assets/tarento.svg'
+import tarentoLogo from '@/assets/tarento.svg'
 
 type SidebarItem = {
   to: string

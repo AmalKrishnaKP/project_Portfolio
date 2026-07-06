@@ -1,5 +1,5 @@
-import type { Employee } from "../../types/employee";
-import profileImage from "../../assets/images/employee/employee_photo.jpg";
+import type { Employee } from "@/types/employee";
+import profileImage from "@/assets/images/employee/employee_photo.jpg";
 
 export const employee: Employee = {
   id: 1,

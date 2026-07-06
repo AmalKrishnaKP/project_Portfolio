@@ -1,4 +1,4 @@
-import type { Employee } from "../types/employee";
+import type { Employee } from "@/types/employee";
 
 export const downloadContact = (employee: Employee) => {
   const vCard = `

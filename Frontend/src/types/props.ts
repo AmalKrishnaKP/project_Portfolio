@@ -1,5 +1,5 @@
-import type { Employee } from "./employee";
-import type { Company } from "./company";
+import type { Employee } from "@/types/employee";
+import type { Company } from "@/types/company";
 
 
 export interface HeroProps {

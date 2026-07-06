@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useEmployeeStore } from "../store/useEmployeeStore"
+import { useEmployeeStore } from "@/store/useEmployeeStore"
 
 type RequestRow = {
   id: string

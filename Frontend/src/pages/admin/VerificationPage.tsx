@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Toast from '../components/Toast'
-import VerificationTable from '../components/VerificationTable'
-import { useEmployeeStore } from '../store/useEmployeeStore'
+import Toast from '@/components/common/Toast'
+import VerificationTable from '@/components/admin/VerificationTable'
+import { useEmployeeStore } from '@/store/useEmployeeStore'
 
 function VerificationPage() {
   const { employees, verifyEmployee } = useEmployeeStore()

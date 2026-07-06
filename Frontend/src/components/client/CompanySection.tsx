@@ -1,4 +1,4 @@
-import type { CompanyProps } from "../../types/props";
+import type { CompanyProps } from "@/types/props";
 
 function CompanySection({ company }: CompanyProps) {
   return (

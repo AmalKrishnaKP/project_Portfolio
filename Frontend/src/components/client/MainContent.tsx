@@ -1,7 +1,7 @@
-import type { EmployeeProps } from "../../types/props";
+import type { EmployeeProps } from "@/types/props";
 import { FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { FiUserPlus } from "react-icons/fi";
-import { downloadContact } from "../../utils/downloadContact";
+import { downloadContact } from "@/utils/downloadContact";
 
 function MainContent({ employee }: EmployeeProps) {
 

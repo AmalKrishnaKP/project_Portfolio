@@ -1,12 +1,12 @@
-import HeroSection from "../../components/client/HeroSection";
-import MainContent from "../../components/client/MainContent";
-import CompanySection from "../../components/client/CompanySection";
-import KnowMoreSection from "../../components/client/KnowMoreSection";
-import TrustedSection from "../../components/client/TrustedSection";
-import Footer from "../../components/client/Footer";
+import HeroSection from "@/components/client/HeroSection";
+import MainContent from "@/components/client/MainContent";
+import CompanySection from "@/components/client/CompanySection";
+import KnowMoreSection from "@/components/client/KnowMoreSection";
+import TrustedSection from "@/components/client/TrustedSection";
+import Footer from "@/components/client/Footer";
 
-import { employee } from "../../data/employees/employee";
-import { company } from "../../data/company/company";
+import { employee } from "@/data/employee";
+import { company } from "@/data/company";
 
 function BusinessCard() {
   return (

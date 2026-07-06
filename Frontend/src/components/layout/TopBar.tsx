@@ -1,5 +1,5 @@
 import { LogOut } from "lucide-react"
-import { useAuthStore } from "../store/useAuthStore"
+import { useAuthStore } from "@/store/useAuthStore"
 
 type TopBarProps = {
   onMenuClick: () => void

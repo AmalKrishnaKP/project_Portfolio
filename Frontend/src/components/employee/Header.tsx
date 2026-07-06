@@ -1,4 +1,4 @@
-import logo from "../../assets/tarento.svg";
+import logo from "@/assets/tarento.svg";
 
 
 

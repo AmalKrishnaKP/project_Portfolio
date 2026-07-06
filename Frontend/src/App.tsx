@@ -1,15 +1,16 @@
 import { useEffect } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import AppLayout from './components/AppLayout.tsx'
-import DirectoryPage from './pages/admin/DirectoryPage.tsx'
-import SettingsPage from './pages/SettingsPage.tsx'
-import SupportPage from './pages/SupportPage.tsx'
-import ThemePage from './pages/ThemePage.tsx'
-import VerificationPage from './pages/VerificationPage.tsx'
-import BusinessCard from './pages/client/BusinessCard.tsx'
-import { useAuthStore } from './store/useAuthStore.ts'
-import LoginPage from './pages/LoginPage.tsx'
-import EmployeeProfile from './pages/employee/EmployeeProfile.tsx'
+import AppLayout from '@/components/layout/AppLayout.tsx'
+import DirectoryPage from '@/pages/admin/DirectoryPage.tsx'
+import SettingsPage from '@/pages/admin/SettingsPage.tsx'
+import SupportPage from '@/pages/admin/SupportPage.tsx'
+import ThemePage from '@/pages/admin/ThemePage.tsx'
+import VerificationPage from '@/pages/admin/VerificationPage.tsx'
+import BusinessCard from '@/pages/client/BusinessCard.tsx'
+import { useAuthStore } from '@/store/useAuthStore.ts'
+import LoginPage from '@/pages/auth/LoginPage.tsx'
+import EmployeeProfile from '@/pages/employee/EmployeeProfile.tsx'
+
 
 
 function App() {

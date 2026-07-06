@@ -1,6 +1,6 @@
 import type { ChangeEvent } from "react";
 
-import type { Employee } from "../../types/employee";
+import type { Employee } from "@/types/employee";
 
 type HeroProps = {
   employee: Employee;

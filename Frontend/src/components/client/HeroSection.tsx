@@ -1,4 +1,4 @@
-import type { HeroProps } from "../../types/props";
+import type { HeroProps } from "@/types/props";
 import { MdVerified } from "react-icons/md";
 
 function HeroSection({ employee, company }: HeroProps) {
