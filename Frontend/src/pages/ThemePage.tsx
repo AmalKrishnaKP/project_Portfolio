@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import ThemePreview from '../components/ThemePreview'
 import Toast from '../components/Toast'
 
@@ -10,14 +10,23 @@ const presets = [
 ]
 
 function ThemePage() {
-  const [primary, setPrimary] = useState('#003d9b')
-  const [secondary, setSecondary] = useState('#36B37E')
-  const [surface, setSurface] = useState('#f8f9fb')
-  const [header, setHeader] = useState('#edeef0')
-  const [text, setText] = useState('#172B4D')
+  const [primary, setPrimary] = useState(() => localStorage.getItem('theme-primary') || '#003d9b')
+  const [secondary, setSecondary] = useState(() => localStorage.getItem('theme-secondary') || '#36B37E')
+  const [surface, setSurface] = useState(() => localStorage.getItem('theme-surface') || '#f8f9fb')
+  const [header, setHeader] = useState(() => localStorage.getItem('theme-header') || '#edeef0')
+  const [text, setText] = useState(() => localStorage.getItem('theme-text') || '#172B4D')
   const [toast, setToast] = useState('')
 
   const values = useMemo(() => ({ primary, secondary, surface, header, text }), [primary, secondary, surface, header, text])
+
+  // Apply changes to document elements dynamically in real-time
+  useEffect(() => {
+    document.documentElement.style.setProperty('--primary-color', primary)
+    document.documentElement.style.setProperty('--secondary-color', secondary)
+    document.documentElement.style.setProperty('--surface-color', surface)
+    document.documentElement.style.setProperty('--header-color', header)
+    document.documentElement.style.setProperty('--text-color', text)
+  }, [primary, secondary, surface, header, text])
 
   function applyPreset(preset: (typeof presets)[number]) {
     setPrimary(preset.values[0])
@@ -28,6 +37,12 @@ function ThemePage() {
   }
 
   function saveTheme() {
+    localStorage.setItem('theme-primary', primary)
+    localStorage.setItem('theme-secondary', secondary)
+    localStorage.setItem('theme-surface', surface)
+    localStorage.setItem('theme-header', header)
+    localStorage.setItem('theme-text', text)
+
     setToast('Theme preferences saved')
     window.setTimeout(() => setToast(''), 2000)
   }

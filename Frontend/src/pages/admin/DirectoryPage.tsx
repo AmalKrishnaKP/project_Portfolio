@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import EditModal from '../components/EditModal'
-import EmployeeCard from '../components/EmployeeCard'
-import { useEmployeeStore } from '../store/useEmployeeStore'
+import EditModal from '../../components/EditModal'
+import EmployeeCard from '../../components/EmployeeCard'
+import { useEmployeeStore } from '../../store/useEmployeeStore'
 import { Link } from 'react-router-dom'
 
 function DirectoryPage() {
@@ -37,7 +37,7 @@ function DirectoryPage() {
         <Link to="/verifi">
           <button
             type="button"
-            className="flex items-center gap-2 rounded-lg bg-[#003d9b] px-5 py-2.5 text-[12px] font-semibold text-white shadow-lg shadow-[#003d9b]/20 transition-all hover:scale-[1.02] active:scale-95"
+            className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-[12px] font-semibold text-white shadow-lg shadow-primary/20 transition-all hover:scale-[1.02] active:scale-95"
           >
             <span className="material-symbols-outlined">pending_actions</span>
             Pending Verify
@@ -56,7 +56,7 @@ function DirectoryPage() {
             id="dept-filter"
             value={selectedDept}
             onChange={(e) => setSelectedDept(e.target.value)}
-            className="w-56 rounded-lg border border-[#dfe1e6] bg-white px-3 py-2 text-sm text-[#172B4D] shadow-sm outline-none transition-all focus:border-[#003d9b] focus:ring-2 focus:ring-[#003d9b]/10 cursor-pointer"
+            className="w-56 rounded-lg border border-[#dfe1e6] bg-white px-3 py-2 text-sm text-[#172B4D] shadow-sm outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/10 cursor-pointer"
           >
             {departments.map((dept) => (
               <option key={dept} value={dept}>

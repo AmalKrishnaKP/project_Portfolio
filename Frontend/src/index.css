@@ -1,8 +1,19 @@
 @import "tailwindcss";
 
-/* Global styles mirror the prototype's typography and subtle enterprise surfaces. */
+@theme {
+  --color-primary: var(--primary-color, #003d9b);
+  --color-secondary: var(--secondary-color, #36B37E);
+  --color-surface-bg: var(--surface-color, #f8f9fb);
+  --color-header-bg: var(--header-color, #edeef0);
+  --color-text-main: var(--text-color, #172B4D);
+}
 
 :root {
+  --primary-color: #003d9b;
+  --secondary-color: #36B37E;
+  --surface-color: #f8f9fb;
+  --header-color: #edeef0;
+  --text-color: #172B4D;
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;

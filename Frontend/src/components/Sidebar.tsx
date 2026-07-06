@@ -24,7 +24,7 @@ const footerItems: SidebarItem[] = [
 function navClassName(isActive: boolean) {
   return [
     'flex items-center px-3 py-2.5 transition-all duration-150',
-    isActive ? 'border-l-4 border-[#003d9b] bg-[#d9e2ff] text-[#00419d]' : 'text-[#434654] hover:bg-[#e7e8ea]',
+    isActive ? 'border-l-4 border-primary bg-primary/10 text-primary' : 'text-[#434654] hover:bg-[#e7e8ea]',
   ].join(' ')
 }
 

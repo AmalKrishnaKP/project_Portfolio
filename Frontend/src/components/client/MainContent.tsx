@@ -1,29 +1,27 @@
 import type { EmployeeProps } from "../../types/props";
 import { FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import { FiUserPlus, FiLogOut } from "react-icons/fi";
+import { FiUserPlus } from "react-icons/fi";
 import { downloadContact } from "../../utils/downloadContact";
-import { useAuthStore } from "../../store/useAuthStore";
 
 function MainContent({ employee }: EmployeeProps) {
-  const { logout } = useAuthStore()
 
   return (
     <section className="relative mx-auto max-w-7xl px-6 py-16">
       <div className="absolute right-6 top-6 flex items-center gap-3">
         <button
           onClick={() => downloadContact(employee)}
-          className="cursor-pointer inline-flex items-center gap-2 rounded-lg bg-[#0052CC] px-5 py-1.5 text-white font-semibold text-sm transition hover:bg-[#003d9b]"
+          className="cursor-pointer inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-1.5 text-white font-semibold text-sm transition hover:opacity-90"
         >
           <FiUserPlus size={16} />
           Save Contact
         </button>
-        <button
+        {/* <button
           onClick={logout}
           className="cursor-pointer inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-1.5 text-[#434654] font-semibold text-sm transition hover:bg-gray-50"
         >
           <FiLogOut size={16} />
           Log Out
-        </button>
+        </button> */}
       </div>
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
 
@@ -34,7 +32,7 @@ function MainContent({ employee }: EmployeeProps) {
 
           <div>
 
-            <h2 className="mb-6 border-l-4 border-[#0052CC] pl-4 text-2xl font-semibold text-[#051A3E]">
+            <h2 className="mb-6 border-l-4 border-primary pl-4 text-2xl font-semibold text-[#051A3E]">
               About {employee.name.split(" ")[0]}
             </h2>
 
@@ -48,7 +46,7 @@ function MainContent({ employee }: EmployeeProps) {
 
           <div>
 
-            <h2 className="mb-6 border-l-4 border-[#0052CC] pl-4 text-2xl font-semibold text-[#051A3E]">
+            <h2 className="mb-6 border-l-4 border-primary pl-4 text-2xl font-semibold text-[#051A3E]">
               Technical Expertise
             </h2>
 
@@ -66,9 +64,9 @@ function MainContent({ employee }: EmployeeProps) {
                     py-2
                     text-sm
                     font-medium
-                    text-[#0052CC]
+                    text-primary
                     transition-all
-                    hover:bg-[#0052CC]
+                    hover:bg-primary
                     hover:text-white
                   "
                 >
@@ -98,7 +96,7 @@ function MainContent({ employee }: EmployeeProps) {
 
               <div className="flex items-center gap-4">
 
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#F1F3FF] text-[#0052CC]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#F1F3FF] text-primary">
                   < FaEnvelope size={22} />
                 </div>
 
@@ -109,7 +107,7 @@ function MainContent({ employee }: EmployeeProps) {
                   </p>
                   <a
                     href={`mailto:${employee.email}`}
-                    className="text-sm font-medium text-[#0052CC] hover:underline"
+                    className="text-sm font-medium text-primary hover:underline"
                   >
                     {employee.email}
                   </a>
@@ -123,7 +121,7 @@ function MainContent({ employee }: EmployeeProps) {
 
               <div className="flex items-center gap-4">
 
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#F1F3FF] text-[#0052CC]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#F1F3FF] text-primary">
                   <FaPhoneAlt size={22} />
                 </div>
 
@@ -135,7 +133,7 @@ function MainContent({ employee }: EmployeeProps) {
 
                   <a
                     href={`tel:${employee.phone}`}
-                    className="text-sm font-medium text-[#0052CC] hover:underline"
+                    className="text-sm font-medium text-primary hover:underline"
                   >
                     {employee.phone}
                   </a>
@@ -148,7 +146,7 @@ function MainContent({ employee }: EmployeeProps) {
 
               <div className="flex items-center gap-4">
 
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#F1F3FF] text-[#0052CC]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#F1F3FF] text-primary">
                   <FaLinkedin size={22} />
                 </div>
 
@@ -162,7 +160,7 @@ function MainContent({ employee }: EmployeeProps) {
                     href={employee.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-[#0052CC] hover:underline break-all"
+                    className="text-sm font-medium text-primary hover:underline break-all"
                   >
                     {employee.linkedin}
                   </a>

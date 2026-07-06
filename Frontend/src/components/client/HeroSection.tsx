@@ -32,7 +32,7 @@ function HeroSection({ employee, company }: HeroProps) {
 
             {/* Verified Badge */}
 
-            <div className="absolute bottom-3 right-3 rounded-full bg-[#0052CC] p-2 shadow-md">
+            <div className="absolute bottom-3 right-3 rounded-full bg-primary p-2 shadow-md">
 
               <MdVerified
                 className="text-white"
@@ -47,7 +47,7 @@ function HeroSection({ employee, company }: HeroProps) {
 
           <div className="flex-1 text-center md:text-left">
 
-            <p className="text-sm font-semibold uppercase tracking-[4px] text-[#0052CC]">
+            <p className="text-sm font-semibold uppercase tracking-[4px] text-primary">
 
               Employee Identity
 
