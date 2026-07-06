@@ -8,7 +8,7 @@ export const employee: Employee = {
   company: "Tarento Solutions",
   email: "ananya.singh@tarento.com",
   phone: "+91 98765 43210",
-  linkedin: "linkedin.com/in/ananyasingh",
+  linkedin: "https://linkedin.com/ananyasingh",
   about:
     "Passionate software engineer with extensive experience in building scalable web applications and high-performance cloud solutions. My mission is to bridge the gap between complex business requirements and elegant technical execution, ensuring every line of code contributes to a seamless user experience and robust system architecture. ",
   skills: [
