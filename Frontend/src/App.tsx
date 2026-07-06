@@ -42,8 +42,8 @@ function App() {
           <Route path="/support" element={currentUser.role == "admin" ? <SupportPage /> : <LoginPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
-        <Route path="/client" element={<BusinessCard />} />
         <Route path="/employee" element={currentUser.role == "employee" ? <EmployeeProfile /> : <LoginPage />} />
+        <Route path="/client" element={<BusinessCard />} />
       </Routes>
     </BrowserRouter>
   )

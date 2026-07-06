@@ -14,7 +14,7 @@ function LoginPage() {
   if (currentUser.role === 'admin') {
     return <Navigate to="/" replace />
   } else if (currentUser.role === 'employee') {
-    return <Navigate to="/client" replace />
+    return <Navigate to="/employee" replace />
   }
 
   const handleSubmit = (e: React.FormEvent) => {
