@@ -43,7 +43,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
         <Route path="/client" element={<BusinessCard />} />
-        <Route path="/employee" element={<EmployeeProfile />} />
+        <Route path="/employee" element={currentUser.role == "employee" ? <EmployeeProfile /> : <LoginPage />} />
       </Routes>
     </BrowserRouter>
   )
