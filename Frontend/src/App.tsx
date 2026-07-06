@@ -9,6 +9,7 @@ import VerificationPage from './pages/VerificationPage.tsx'
 import BusinessCard from './pages/client/BusinessCard.tsx'
 import { useAuthStore } from './store/useAuthStore.ts'
 import LoginPage from './pages/LoginPage.tsx'
+import EmployeeProfile from './pages/employee/EmployeeProfile.tsx'
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
         <Route path="/client" element={<BusinessCard />} />
+        <Route path="/employee" element={<EmployeeProfile />} />
       </Routes>
     </BrowserRouter>
   )
