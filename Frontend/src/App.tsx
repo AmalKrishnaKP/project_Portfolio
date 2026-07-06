@@ -30,66 +30,18 @@ function App() {
   }, [])
   return (
     <BrowserRouter>
+      {/* Keep layout and page responsibilities separated for readability. */}
       <Routes>
-        {/* Public/Login Route */}
-        <Route
-          path="/login"
-          element={
-            currentUser.role === 'admin' ? (
-              <Navigate to="/" replace />
-            ) : currentUser.role === 'employee' ? (
-              <Navigate to="/client" replace />
-            ) : (
-              <LoginPage />
-            )
-          }
-        />
-
-        {/* Admin protected routes */}
-        <Route
-          element={
-            currentUser.role === 'admin' ? (
-              <AppLayout />
-            ) : (
-              <Navigate to="/login" replace />
-            )
-          }
-        >
-          <Route path="/" element={<DirectoryPage />} />
-          <Route path="/verifi" element={<VerificationPage />} />
-          <Route path="/sett" element={<ThemePage />} />
-          <Route path="/settings" element={<SettingsPage />} />
-          <Route path="/support" element={<SupportPage />} />
+        <Route element={currentUser.role != "" && <AppLayout />}>
+          <Route path="/" element={currentUser.role == "admin" ? <DirectoryPage /> : <LoginPage />} />
+          <Route path="/verifi" element={currentUser.role == "admin" ? <VerificationPage /> : <LoginPage />} />
+          {/* <Route path="/detail" element={<DetailPage />} /> */}
+          <Route path="/sett" element={currentUser.role == "admin" ? <ThemePage /> : <LoginPage />} />
+          <Route path="/settings" element={currentUser.role == "admin" ? <SettingsPage /> : <LoginPage />} />
+          <Route path="/support" element={currentUser.role == "admin" ? <SupportPage /> : <LoginPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
-
-        {/* Employee protected route */}
-        <Route
-          path="/client"
-          element={
-            currentUser.role === 'employee' ? (
-              <BusinessCard />
-            ) : (
-              <Navigate to="/login" replace />
-            )
-          }
-        />
-
-        {/* Fallback route */}
-        <Route
-          path="*"
-          element={
-            <Navigate
-              to={
-                currentUser.role === 'admin'
-                  ? '/'
-                  : currentUser.role === 'employee'
-                  ? '/client'
-                  : '/login'
-              }
-              replace
-            />
-          }
-        />
+        <Route path="/client" element={<BusinessCard />} />
       </Routes>
     </BrowserRouter>
   )
