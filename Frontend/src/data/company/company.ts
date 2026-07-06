@@ -1,5 +1,5 @@
 import type { Company } from "../../types/company";
-import companyLogo from "../../assets/images/company_logo.png";
+import companyLogo from "../../assets/tarento.svg";
 
 export const company: Company = {
   name: "Tarento Technologies",

@@ -5,7 +5,7 @@ import KnowMoreSection from "../../components/client/KnowMoreSection";
 import TrustedSection from "../../components/client/TrustedSection";
 import Footer from "../../components/client/Footer";
 
-import { employee } from "../../data/client/employee";
+import { employee } from "../../data/employees/employee";
 import { company } from "../../data/company/company";
 
 function BusinessCard() {

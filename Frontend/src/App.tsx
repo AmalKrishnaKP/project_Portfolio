@@ -5,6 +5,7 @@ import SettingsPage from './pages/SettingsPage.tsx'
 import SupportPage from './pages/SupportPage.tsx'
 import ThemePage from './pages/ThemePage.tsx'
 import VerificationPage from './pages/VerificationPage.tsx'
+import BusinessCard from './pages/client/BusinessCard.tsx'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/support" element={<SupportPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
+        <Route path="/client" element={<BusinessCard />} />
       </Routes>
     </BrowserRouter>
   )
