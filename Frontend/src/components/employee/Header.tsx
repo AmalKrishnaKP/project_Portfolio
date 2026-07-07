@@ -1,5 +1,5 @@
 import logo from "@/assets/tarento.svg";
-
+import LogoutButton from "../LogoutButton";
 
 
 
@@ -17,27 +17,28 @@ function Header({
   return (
     <header className="fixed top-0 z-50 flex h-[72px] w-full items-center justify-between border-b bg-white px-8 shadow-sm">
 
-        <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4">
 
-  <img
-    src={logo}
-    
-    className="h-12 w-auto"
-  />
+        <img
+          src={logo}
 
-  <div>
+          className="h-12 w-auto"
+        />
 
-   
+        <div>
 
-    <h1 className="text-xs text-gray-500">
-      Employee Digital Profile
-    </h1>
 
-  </div>
 
-</div>
+          <h1 className="text-xs text-gray-500">
+            Employee Digital Profile
+          </h1>
+
+        </div>
+
+      </div>
 
       <div className="flex gap-4">
+        <LogoutButton />
 
         <button
           onClick={() => setShowQR(true)}
@@ -48,7 +49,7 @@ function Header({
 
         {!isEditing ? (
           <button
-          onClick={() => setIsEditing(true)}
+            onClick={() => setIsEditing(true)}
             className="rounded-lg border px-4 py-2"
           >
             Edit Profile
