@@ -32,4 +32,3 @@ function BusinessCard() {
 }
 
 export default BusinessCard;
-
