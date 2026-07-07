@@ -7,7 +7,7 @@ function MainContent({ employee }: EmployeeProps) {
 
   return (
     <section className="relative mx-auto max-w-7xl px-6 py-16">
-      <div className="absolute right-6 top-6 flex items-center gap-3">
+      <div className="sticky top-4 z-50 mb-8 flex justify-end">
         <button
           onClick={() => downloadContact(employee)}
           className="cursor-pointer inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-1.5 text-white font-semibold text-sm transition hover:opacity-90"
